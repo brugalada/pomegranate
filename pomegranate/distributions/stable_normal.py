@@ -298,7 +298,7 @@ class StableNormal(Distribution):
 			if self.covariance_type == 'sphere':
 				covs = covs.mean(dim=-1)
 
-		covs += np.eye(COV_TOL)
+		covs += COV_TOL*np.eye(len(np.diagonal(covs)))
 
 		_update_parameter(self.means, means, self.inertia)
 		_update_parameter(self.covs, covs, self.inertia)
