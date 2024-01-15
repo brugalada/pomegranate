@@ -7,6 +7,7 @@ from .gamma import Gamma
 from .independent_components import IndependentComponents
 from .joint_categorical import JointCategorical
 from .normal import Normal
+from .stable_normal import StableNormal
 from .poisson import Poisson
 from .student_t import StudentT
 from .uniform import Uniform
