@@ -21,8 +21,9 @@ LOG_2_PI = 1.83787706641
 COV_TOL = 1e-6
 
 
-class Normal(Distribution):
-	"""A normal distribution object.
+class StableNormal(Distribution):
+	"""A normal distribution object. It has been tweaked to not have small values
+	in the diagonal.
 
 	A normal distribution models the probability of a variable occuring under
 	a bell-shaped curve. It is described by a vector of mean values and a
